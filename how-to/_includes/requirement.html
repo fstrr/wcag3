@@ -10,10 +10,16 @@
 <body dir="ltr">
   {% include "layout/header.html" %}
   <div class="default-grid with-gap leftcol">
-    <main id="main" class="standalone-resource__main" tabindex="-1">
-      {%- if subtitle %}
-      <h2>{{ subtitle }}</h2>
-      {%- endif %}
+    {% include "layout/outcome-nav.html" %}
+    <main id="main" tabindex="-1">
+      <h1>{% if title %}{{ title }}{% else %}{{ page.fileSlug | replace: '-', ' ' | capitalize }}{% endif %}</h1>
+
+      <p class="requirement-level"><span>Level: </span>{{ level | capitalize }}</p>
+
+      <div class="normative">
+        {{ text }}
+      </div>
+      
       {{ content }}
     </main>
   </div>

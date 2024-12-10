@@ -6,13 +6,13 @@ var respecConfig = {
 	permalinkEdge: true,
 	permalinkHide: false,
 	// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
-	specStatus: "WD",
+	specStatus: "DNOTE",
 	//crEnd:                "2012-04-30",
 	//perEnd:               "2013-07-23",
 	publishDate:          "2024-12-12",
 	
 	// the specifications short name, as in https://www.w3.org/TR/short-name/
-	shortName: "wcag-3.0",
+	shortName: "wcag-3.0-explainer",
 	
 	
 	// if you wish the publication date to be other than today, set this
@@ -21,7 +21,10 @@ var respecConfig = {
 	license: "document",
 	
 	// if there a publicly available Editors Draft, this is the link
-	edDraftURI: "https://w3c.github.io/wcag3/guidelines/",
+	edDraftURI: "https://w3c.github.io/wcag3/explainer/",
+
+	// Reference definitions from the WCAG3 specification
+	xref: ["WCAG3"],
 	
 	// if this is a LCWD, uncomment and set the end of its review period
 	// lcEnd: "2012-02-21",
@@ -65,25 +68,6 @@ var respecConfig = {
 		companyURI: "https://tetralogical.com/",
 		w3cid: 90883
 	}],
-
-	formerEditors: [{
-		name: "Michael Cooper, Staff Contact, 2016-2023",
-		company: "W3C",
-		companyURI: "https://www.w3.org/",
-		w3cid: 34017
-	}, {
-		name: "Shawn Lauriat, Editor, 2016-2023",
-		company: "Google, Inc.",
-		companyURI: "https://www.google.com/",
-		w3cid: 90646
-	}, {
-		name: "Wilco Fiers, Project Manager, 2021-2023",
-		company: "Deque Systems, Inc.",
-		companyURI: "https://www.deque.com/",
-		w3cid: 43334
-	}],
-
-
 	
 	// authors, add as many as you like.
 	// This is optional, uncomment if you have authors as well as editors.
@@ -106,30 +90,18 @@ var respecConfig = {
 	
 	group: "ag",
 	github: "w3c/wcag3",
-  
-  // name (without the @w3.org) of the public mailing to which comments are due
-  wgPublicList: "public-agwg-comments",
 
 	maxTocLevel: 4,
 	
-	preProcess: [preRespec],
 	postProcess: [postRespec],
 	
 	localBiblio: {
-		"WCAG3-requirements": {
-			"title": "Requirements for WCAG 3.0",
+		"WCAG3": {
+			"title": "W3C Accessibility Guidelines (WCAG) 3.0",
 			"publisher": "World Wide Web Consortium",
-			"date": "8 November 2024",
-			"href": "https://www.w3.org/TR/wcag-3.0-requirements-20241108/"
+			"date": "28 May 2024",
+			"href": "https://www.w3.org/TR/2024/WD-wcag-3.0-20240528/"
 		},
-
-		"WCAG3-explainer": {
-			"title": "Explainer for W3C Accessibility Guidelines (WCAG) 3.0",
-			"publisher": "World Wide Web Consortium",
-			"date": "8 November 2024",
-			"href": "https://www.w3.org/TR/wcag-3.0-explainer-20241108/"
-		},
-
 		"508-criteria": {
 			"title": "Section 508 Functional Performance Criteria",
 			"publisher": "United States Access Board",

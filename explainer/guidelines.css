@@ -26,19 +26,8 @@ summary::after {
 	content: url(img/summary.svg);
 }
 .summaryEnd {
-	border: 0;
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-	word-wrap: normal !important;  
-}
-
-.decision-tree summary::after {
+	text-align: center;
+	font-weight: bold;
 }
 
 /* removing for readability
@@ -53,44 +42,31 @@ summary::after {
 a.internalDFN[title]:hover, .internalDFN[title]:active, a.internalDFN[title]:focus {
 	cursor: help;
 }
-.requirement h4, .requirement h5 {
+.outcome h4 {
 	font-style: normal;
 	font-weight: normal;
 	font-size: 100%;
 	color: #005A9C;
 }
-.requirement .requirement-type {
-	font-size: 90%;
-	font-variant: small-caps;
-	color: #404040;
-}
-
-.guideline {
-	margin-left: 4em;
-	position: relative;
-}
-
-.guideline .requirement {
-	margin-left: 4em;
-	position: relative;
-}
-
-.guideline-text, .requirement-text {
-	font-size: 110%;
+.guideline-text, .outcome-text {
+	font-size: 11 0%;
 	margin-top: 0;
+	margin-bottom: 0;
+	text-indent: 50px;
 }
-.guideline h3, .requirement h4, .requirement h5 {
+.guideline h3, .outcome h4 {
 	width: 100%;
 	margin-bottom: 0;
 	margin-top: .4em;
 }
-.guideline h3, .guideline h4 {
-font-size: 110%;
+.guideline h3 {
+font-size: 120%;
 color: black;
 }
 
 .guideline p {
 	margin-top: 0;
+	text-indent: 50px;
 }
 
 h2, h3, h4 {
@@ -104,7 +80,7 @@ h4 {font-size: 110%}
 h5, h6 {
 	width: 100%;
 	font-style: normal !important;
-	margin-top: 1em;
+	margin-top: 1rem;
 	margin-bottom: 0;
 
 }
@@ -112,6 +88,15 @@ h5, h6 {
 .methods h5, .errors h5, .rating h5 {
 	font-size: 100%;
 	color: #005A9C;
+}
+.rating-table, .rating-table th, .rating-table td {
+	border: 1px solid black;
+	vertical-align: top;
+	border-collapse: collapse;
+	padding: 5px;
+}
+.rating-table th[scope=row] {
+	white-space: nowrap;
 }
 caption {
 	font-style: normal !important;
@@ -167,6 +152,7 @@ caption {
 }
 .status-marker {
   font-weight: 700;
+  color: #091832;
   font-size: 11px;
   font-size: .6125rem;
   line-height: 1.4;
@@ -174,12 +160,9 @@ caption {
   margin-left: 1em;
   padding: 4px 8px;
   border-radius: 3px;
+  background: #d0e1f1;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
-.status-marker {
-	background: #d0e1f1;
-	color: #091832;  
 }
 a[href].status-link {
 	color: var(--text);
@@ -194,63 +177,4 @@ a[href].status-link {
 	text-indent: 0px;
 	font-weight: bolder;
 	font-size: .75em;
-}
-
-section {
-	margin-bottom: 2em;
-}
-#guidelines > section {
-	margin-bottom: 4em;
-}
-
-#guidelines :is(h2, h3, h4, h5, h6) {
-	margin-top: 1em;
-}
-
-
-@media (min-width: 768px) { 
-	.guideline .body-wrapper {
-		display: grid;
-		grid-template-columns: 2fr 1fr;
-	}
-}
-
-.doclinks {
-	margin-left: 0.2em;
-}
-
-.doclinks a {
-	display: inline-block;
-	outline: 0;
-	padding: 5px 10px;
-	font-size: 90%;
-	line-height: 1.5;
-	border-radius: 2px;
-	border: 1px solid #ccc;
-	text-decoration: none;
-	color: #333 !important;
-}
-
-.doclinks a:focus, .doclinks a:hover {
-	color: #141414;
-	background-color: #f2f2f2;
-	border-color: #adadad;
-}
-
-.doclinks a:active {
-	outline: 0;
-	background-image: none;
-	box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-
-svg:not(:root) {
-	overflow: hidden;
-}
-
-[class^="i-"] {
-	width: 1em;
-	height: 1em;
-	fill: currentColor;
-	vertical-align: middle;
-	margin-top: -.25em;
 }
